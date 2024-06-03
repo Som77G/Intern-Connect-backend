@@ -25,7 +25,7 @@ app.use(cookieParser());
 //cors policy
 app.use(cors(
     {
-        origin: "https://intern-connect-frontend-three.vercel.app/",
+        origin: "https://intern-connect-frontend-three.vercel.app",
         methods: "GET, POST, OPTIONS, PUT, DELETE",
         credentials: true,
     }
@@ -73,7 +73,7 @@ const server = app.listen(process.env.PORT, () => {
 //create socket instance
 const io = new Server(server, {
     cors: {
-        origin: "https://intern-connect-frontend-three.vercel.app/",
+        origin: "https://intern-connect-frontend-three.vercel.app",
         methods: ["GET", "POST", "PUT"],
         credentials: true,
     },
