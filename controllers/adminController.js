@@ -8,7 +8,7 @@ const dashboard = async(req, res) => {
     try {
         const userid = req.query.userid;
 
-
+        
         const getAdmin = `
             SELECT u.username, u.email, p.*
             FROM users_admin u
