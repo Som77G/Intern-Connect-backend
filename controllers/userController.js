@@ -99,7 +99,7 @@ const login = async (req, res) => {
         }
 
         // Set cookies and send response
-        res.cookie("token", token, { httpOnly: true, sameSite : 'none', secure: false });
+        res.cookie("token", token, { httpOnly: true, sameSite : 'none', secure: true });
         return res.status(200).json({ message: user[0], userType: userType, status: 200 });
     } catch (error) {
         console.error("Error processing POST request:", error);
