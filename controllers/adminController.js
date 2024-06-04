@@ -51,9 +51,9 @@ const addStudent = async (req, res) => {
         console.log("line 18 pe hai");
         if (user && user.length > 0) {
             console.log("Student exist already");
-            return res.status(400).json({
+            return res.status(404).json({
                 message: "Student already exists",
-                status: '400'
+                status: '404'
             });
         }
         const userid = uuidv4();
@@ -83,7 +83,7 @@ const addStudent = async (req, res) => {
         console.error("Error adding student to the database:", error);
         return res.status(500).json({
             status: 500,
-            error: "Internal Server Error"
+            message: "Internal Server Error"
         });
     }
 };
